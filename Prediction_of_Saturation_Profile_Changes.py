@@ -31,7 +31,7 @@ edge_sat_sur_model, edge_sat_base_model, edge_sat_sga_model, edge_pt_model, edge
 
 st.sidebar.title('Input Parameters:')
 st.sidebar.header('Thickness of the AC layer (inch)')
-surT = st.sidebar.slider('', min_value = 3, max_value = 26, step = 1, value = 5)
+surT = st.sidebar.slider('', min_value = 3, max_value = 26, step = 1, value = 6)
 st.sidebar.header('Thickness of the Base layer (inch)')
 baseT = st.sidebar.slider('', min_value = 6, max_value = 28, step = 1, value = 12)
 total = 120 + surT + baseT
@@ -43,7 +43,7 @@ st.sidebar.header('Subgrade Type (AASHTO)')
 sg_type = st.sidebar.selectbox("", ('A-1-b', 'A-2-4', 'A-4', 'A-6', 'A-7'))
 
 st.sidebar.header('Flood Peak Time (h)')
-pi_time = st.sidebar.selectbox("", (6, 12, 36, 72))
+pi_time = st.sidebar.selectbox("", (6, 12, 36, 72), index=2)
 st.sidebar.image('./Images/Figure 2.png')
 
 prediction_state = st.sidebar.radio('Predication', ('set parameters', 'show predictions'))
