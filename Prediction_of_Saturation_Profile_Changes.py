@@ -1,5 +1,5 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 import math
@@ -177,7 +177,7 @@ if prediction_state == 'show predictions' and show_option == 'Wheel Path':
     if wp_vadose_pred[0][2] > 0:
         wp_vadose_pred[0][2] = - wp_vadose_pred[0][2]
     print(wp_vadose_pred)
-    st.markdown(f'The predicted peak saturation time for pavement wheel path is **:red[{math.ceil(edge_pt_pred)} h]**, and the restoration time for pavement wheel path is **:red[{math.ceil(edge_rt_pred)} h]**')
+    st.markdown(f'The predicted peak saturation time for pavement wheel path is **:red[{math.ceil(wp_pt_pred)} h]**, and the restoration time for pavement wheel path is **:red[{math.ceil(wp_rt_pred)} h]**')
     X2 = np.arange(0, math.ceil(wp_pt_pred), 1, dtype=int)
     Y2_sgb = np.arange(0, (120-gwt)*inch2meter, 0.5*inch2meter)
     Y2_sga = np.arange((120-gwt)*inch2meter, 120*inch2meter, 0.5*inch2meter)
