@@ -8,7 +8,8 @@ from utils import *
 
 st.set_page_config(
     page_title='Prediction of Saturation Changes during Inundation',
-    page_icon=":arrow_right:"
+    page_icon=":arrow_right:",
+    initial_sidebar_state='expanded'
 )
 
 image = Image.open('./Images/Figure 3.jpg')
