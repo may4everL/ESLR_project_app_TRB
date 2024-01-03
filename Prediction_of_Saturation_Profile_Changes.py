@@ -40,7 +40,7 @@ gwt = st.sidebar.slider("", min_value = surT+baseT+20, max_value = surT+baseT+60
 st.sidebar.markdown(f':red[**{gwt-surT-baseT} in**] from top of subgrade')
 
 st.sidebar.header('Subgrade Type (AASHTO)')
-sg_type = st.sidebar.selectbox("", ('A-1-b', 'A-2-4', 'A-4', 'A-6', 'A-7'), index=2)
+sg_type = st.sidebar.selectbox("", ('A-1-b', 'A-2-4', 'A-4', 'A-6', 'A-7'), index=1)
 
 st.sidebar.header('Flood Peak Time (h)')
 pi_time = st.sidebar.selectbox("", (6, 12, 36, 72), index=2)
